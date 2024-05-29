@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="flex f-dierction gap-15 w-500 bd-black px py ">
+        <label class="text-align-center font-size-30">Form</label>
+        <div id="firstname">
+            <label>First name :</label>
+            <input type="text" name="fname" id="fname">
+            <p id="fnameText" style="display: inline-block;"></p>
+        </div>
+        <div id="lastname">
+            <label>Last name :</label>
+            <input type="text" name="lname" id="lname">
+            <p id="lnameText" style="display: inline-block;"></p>
+        </div>
+        <div id="email-input">
+            <label>Email :</label>
+            <input type="text" name="email" id="email" class="mx-25">
+            <p id="emailText" style="display: inline-block;"></p>
+        </div>
+        <div class="radio">
+            <label>Gender :</label>
+            <input type="radio" name="radio" id="radio1" class="radio-obj">
+            <label>Male</label>
+            <input type="radio" name="radio" id="radio2" class="radio-obj">
+            <label>Female</label>
+            <p id="radioText"></p>
+        </div>
+        <div class="read">
+            <input type="checkbox" name="chechbox1" id="checkbox1">
+            <p style="display: inline-block;">I agree to your term</p>
+            <div id="checkText"></div>
+        </div>
+        <div class="btn flex gap-15">
+            <button type="submit" onclick="myClick()"
+                class="w-30 bg-purpel border-radius-20 px py-10 text-white ">Submit</button>
+            <button type="reset" onclick="cancelClick()"
+                class="w-30 bg-purpel border-radius-20 px py-10 text-white ">Cancel</button>
+        </div>
+    </div>
+    <script>
+        var firstname = document.getElementById("fname").value;
+        var lastname = document.getElementById("lname").value;
+        var email = document.getElementById("email").value;
+
+
+
+        function myClick() {
+
+
+            if (firstname == "") {
+
+                document.getElementById("fnameText").innerHTML = "First Name is require";
+                document.getElementById("fnameText").style.color = "Red";
+
+            }
+            if (lastname == "") {
+
+                document.getElementById("lnameText").innerHTML = "Last Name is require";
+                document.getElementById("lnameText").style.color = "Red";
+            }
+            if (email == "") {
+
+                document.getElementById("emailText").innerHTML = "Email is require";
+                document.getElementById("emailText").style.color = "Red";
+
+            }
+            var selected = document.querySelector('input[name="radio"]:checked');
+            var checkbox = document.getElementById("checkbox1").checked;
+            if (checkbox != true) {
+                document.getElementById("checkText").innerHTML = "checkbox is selected!";
+                document.getElementById("checkText").style.color = "Red";
+
+            }
+            if (selected == null) {
+                document.getElementById("radioText").innerHTML += "Not any radio button is selected!"
+                document.getElementById("radioText").style.color += "Red"
+
+            }
+
+            if (document.getElementById("fname").value != '' && document.getElementById("lname").value != '' && document.getElementById("email").value != '' && selected != null && checkbox != false) {
+                alert("Your Form is submit")
+            }
+
+        }
+        function cancelClick() {
+            document.getElementById("fname").value = "";
+            document.getElementById("lname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("checkbox1").checked = "";
+            document.getElementById("fnameText").innerHTML = "";
+            document.getElementById("lnameText").innerHTML = "";
+            document.getElementById("emailText").innerHTML = "";
+            document.getElementById("radioText").innerHTML = "";
+            document.getElementById("checkText").innerHTML = ""
+
+
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

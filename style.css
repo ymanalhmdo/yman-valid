@@ -1,0 +1,62 @@
+.flex {
+    display: flex;
+}
+
+.f-dierction {
+    flex-direction: column;
+}
+
+.gap-15 {
+    gap: 15px;
+}
+
+.w-500 {
+    width: 500px;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.border-radius-20 {
+    border-radius: 20px;
+}
+
+.bg-purpel {
+    background-color: blueviolet;
+}
+
+.bd-black {
+    border: 1px black solid;
+}
+
+.px {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.py {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.py-10 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.text-white {
+    color: white;
+}
+
+.mx-25 {
+    margin: 0 25px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.font-size-30 {
+    font-size: 30px;
+}
